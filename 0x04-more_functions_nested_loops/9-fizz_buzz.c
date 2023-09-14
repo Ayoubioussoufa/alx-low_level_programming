@@ -29,7 +29,7 @@ int main(void)
         {
             printf("%d", x);
         }
-        // Print a space after each number (except the last one)
+        /* Print a space after each number (except the last one) */
         if (x != 100)
         {
             printf(" ");
