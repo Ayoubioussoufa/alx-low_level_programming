@@ -7,34 +7,25 @@
  * and for the multiples of five prints Buzz
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-    int x;
 
-    for (x = 1; x <= 100; x++)
-    {
-        if (x % 3 == 0 && x % 5 != 0)
-        {
-            printf("Fizz");
-        }
-        else if (x % 5 == 0 && x % 3 != 0)
-        {
-            printf("Buzz");
-        }
-        else if (x % 3 == 0 && x % 5 == 0)
-        {
+int main(void) {
+    for (int i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
             printf("FizzBuzz");
+        } else if (i % 3 == 0) {
+            printf("Fizz");
+        } else if (i % 5 == 0) {
+            printf("Buzz");
+        } else {
+            printf("%d", i);
         }
-        else
-        {
-            printf("%d", x);
-        }
-        /* Print a space after each number (except the last one) */
-        if (x <= 100)
-        {
+
+        /* Print a space after each number or word (except the last one) */
+        if (i < 100) {
             printf(" ");
         }
     }
     printf("\n");
-    return (0);
+
+    return 0;
 }
